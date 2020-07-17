@@ -8,6 +8,7 @@
 <script>
 let compchoices =['rock','paper','scissor'];
 
+//randomizes the computer selection from the comp choices list'
 function computerPlay(choices){
     return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -38,20 +39,34 @@ function playRound(playerSelection, computerSelection){
     else if (playerSelection ==="scissor" && computerSelection ==="paper") {
         return ("You win! Scissor beats paper!");
     }
+    else {
+      return "Oops you made a mistake!"
+    }
     
 } 
+//Creates a round of the game 
 function oneround(compchoices){
-    playerSelection=prompt("Rock, paper, scissors says shoot! Please choose rock, paper, or scissor.")
+    playerSelection=prompt("Rock, paper, scissor says shoot! Please choose rock, paper, or scissor.")
     computerSelection=computerPlay(compchoices)
     return (playRound(playerSelection, computerSelection))
 }
+//Loops through the game 5 rounds prints results of the game to the console 
 function game(compchoices){ 
-  let win = 0; 
+  let win = 0;
+  let round = " ";
   for (i = 0; i < 5; i++) {
-    alert(oneround(compchoices))   
+    round=oneround(compchoices)
+    console.log(round);
+    if (round.includes("win")){
+      win=win+1  
+    }
+  }
+  return (win);
 }
-}
-alert(game(compchoices));
+
+let wins = game(compchoices)
+//Announces total wins to the console. 
+console.log("Wow you have a total of " + wins + " wins!");
 </script>
 </body>
 </html>
