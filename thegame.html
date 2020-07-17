@@ -6,15 +6,41 @@
 </head>
 <body>
 <script>
-let compchoices =['rock','paper','scissors'];
+let compchoices =['rock','paper','scissor'];
 
-function computerplay(choices){
+function computerPlay(choices){
     return choices[Math.floor(Math.random() * choices.length)];
 }
+let playerSelection=prompt("Rock, paper, scissors says shoot! Please choose rock, paper, or scissor.");    
+let computerSelection=computerPlay(compchoices);
 
-
-
-
+function playRound(playerSelection, computerSelection){
+    playerSelection=playerSelection.toLowerCase()
+    if (playerSelection===computerSelection) { //player and compter have the same selection  
+        return ("It's a tie you both chose:"+playerSelection);
+    }
+    //compares the selection of the player to the computer and then returns a winner 
+    else if (playerSelection === "rock" && computerSelection ==="scissor"){
+        return ("You win! Rock beats scissors!");
+        }
+    else if (playerSelection ==="rock" && computerSelection ==="paper") {
+        return ("You lose! Paper beats Rock!");
+    }
+    else if (playerSelection ==="paper" && computerSelection === "scissor") { 
+        return ("You lose! Scissor beats paper!");
+    }
+    else if (playerSelection ==="paper" && computerSelection ==="rock") {
+        return ("You win! Paper beats Rock!");
+    }
+    else if (playerSelection ==="scissor" && computerSelection ==="rock") {
+        return ("You lose! Rock beats scissors!");
+    }
+    else if (playerSelection ==="scissor" && computerSelection ==="paper") {
+        return ("You win! Scissor beats paper!");
+    }
+    
+} 
+alert(playRound(playerSelection, computerSelection));
 
 
 </script>
