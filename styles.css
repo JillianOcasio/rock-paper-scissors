@@ -1,0 +1,84 @@
+body {
+    background-color: #e6f2ff;
+  }
+h1{
+    text-align: center;
+    color:#47476b;
+      
+}
+h2{
+    text-align: center;
+    color:#47476b;
+      
+}
+
+
+#rock {
+    background-color: #e6f2ff; 
+    border-radius: 50%;
+    color: #FAF0E6;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flexbox;
+    font-size: 16px;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 44%;
+
+      }
+#rock:hover {
+        background-color: olivedrab; 
+        color:#FAF0E6;
+    }
+  
+#paper {
+    background-color: #e6f2ff;
+    border-radius: 12px;
+    position: absolute;
+    color:grey;
+    padding: 40px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flexbox;
+    font-size: 16px;
+    left: 255px
+      }
+  
+#paper:hover {
+    background-color: aquamarine; 
+    color:#FAF0E6;
+}
+#scissor {
+	background-color:#e6f2ff;
+    border-radius: 12px;
+    position: absolute;
+    color:grey;
+    padding: 40px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flexbox;
+    font-size: 16px;
+    top: 18%;
+    right: 215px;
+    
+
+}
+#scissor:hover {
+    background-color: hotpink;
+	
+}
+
+#score {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 550px; 
+    color: purple;
+    border: 0.5rem outset;
+    text-align: center;
+    font-size: large;
+  
+}
